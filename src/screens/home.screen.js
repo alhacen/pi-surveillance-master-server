@@ -1,26 +1,14 @@
 import React from 'react';
+import CameraCard from '../components/cameraCard' ;
+import {Link} from 'react-router-dom';
 
-export default function HomeSceen() {
-  return (
-    <div class="">
-      <section class="section columns">
-        <div class="column is-3">
-          <table class="table">
-            <thead>
-              <tr>
-                <th>12/05/2020</th>
-              </tr>
-              <tr>
-                <th>13/05/2020</th>
-              </tr>
-            </thead>
-         </table>
+const HomeScreen = (props) =>{
+    return(
+        <div>
+            <CameraCard devices={[{name:"cam1",ip:"192.168.1.4",active:true}]} />
+            <Link to="/dashboard/add-device" id="addDeviceBtn"><p className="card padding16 is-circle">+</p></Link>
         </div>
-        <div class="column">
-          asdfasddsf
-        </div>
-      </section>
-    </div>
-  );
+
+    )
 }
-  
+export default HomeScreen;
